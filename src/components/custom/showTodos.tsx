@@ -12,11 +12,12 @@ const ShowTodos: React.FC<ShowTodosProps> = ({ todos, filteredTodos, setTodos, s
 
     const handleDelete = (id: number) => {
         const updatedTodos = todos.filter((todo) => todo.id !== id);
-        const updatedFilteredTodos = filteredTodos.filter((todo) => todo.id !== id);
-
         setTodos(updatedTodos);
+    
+        const updatedFilteredTodos = filteredTodos.filter((todo) => todo.id !== id);
         setFilteredTodos(updatedFilteredTodos);
     };
+    
 
     return (
         <center>

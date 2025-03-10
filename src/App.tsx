@@ -26,6 +26,8 @@ function App() {
   useEffect(() => {
     if (todos.length > 0) {
       localStorage.setItem("todos", JSON.stringify(todos));
+    } else {
+      localStorage.removeItem("todos");
     }
   }, [todos]);
 
