@@ -34,7 +34,13 @@ function App() {
       <ResizablePanelGroup direction="horizontal">
         <ResizablePanel>
           <SearchForm todos={todos} setFilteredTodos={setFilteredTodos} />
-          <ShowTodos todos={filteredTodos} setTodos={setTodos} />
+          <ShowTodos
+            todos={todos}
+            filteredTodos={filteredTodos}
+            setTodos={setTodos}
+            setFilteredTodos={setFilteredTodos}
+          />
+
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel>
